@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+    <link rel="stylesheet" href="styles/global.css">
+
+    <link rel="stylesheet" href="styles/container.css">
+    
+    <link rel="stylesheet" href="styles/sidebar.css">
+
+    <link rel="stylesheet" href="styles/appeal-container/appeal-container.css">
+    <link rel="stylesheet" href="styles/appeal-container/appeal-item.css">
+
+    <link rel="stylesheet" href="styles/dialogue-container/dialogue-container.css">
+    <link rel="stylesheet" href="styles/dialogue-container/create-appeal.css">
+    <link rel="stylesheet" href="styles/dialogue-container/dialogue.css">
+    <style>
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/check-auth.js"></script>
+
+    <div class="container">
+        <div class="sidebar-container">
+            <button id="buttonAppeals">Обращения</button>
+            <button id="buttonUsers">Пользователи</button>
+            <button id="buttonCompanies">Компании</button>
+            <button id="buttonSettings">Настройки</button>
+        </div>
+
+        <div class="appeal-container">
+            <div class="header-list-appeals">
+                <h1>Обращения</h1>
+                <input type="text" id="formSearchAppeal" placeholder="Поиск компании..." required/>
+                <button class="button-open-form-search-appeal" id="buttonOpenFormSearchAppeal" type="button">Найти</button>
+                <button class="button-open-form-create-appeal" id="buttonOpenFormCreateAppeal" type="button">Создать обращение</button>
+                <button class="button-close-form-create-appeal hidden" id="buttonCloseFormCreateAppeal" type="button">Отмена</button>
+            </div>
+            <div id="listSearchAppeal">
+            </div>
+            <div id="listAppeals">
+            </div>
+        </div>
+
+        <div class="user-container hidden">
+            <div class="header-list-users">
+                <h1>Пользователи</h1>
+                <button class="button-open-form-create-user" id="buttonOpenFormCreateUser" type="button">Создать пользователя</button>
+                <button class="button-close-form-create-user hidden" id="buttonCloseFormCreateUser" type="button">Отмена</button>
+            </div>
+            <form class="form-create-user hidden" id="formCreateUser">
+                <input type="text" id="name" placeholder="Имя" required />
+                <input type="email" id="email" placeholder="Email" required/>
+                <input type="password" id="password" placeholder="Пароль" required/>
+                <input type="text" id="role" placeholder="Роль" required/>
+                <button type="submit" class="btn">Создать</button>
+                <div id="responseMessage"></div>
+            </form>
+            <div id="listUsers">
+            </div>
+        </div>
+
+        <div class="company-container hidden">
+            <div class="header-list-companies">
+                <h1>Компании</h1>
+                <input type="text" id="formSearchCompany" placeholder="Поиск компании... ИНН или имя компании" required/>
+            </div>
+            <div id="listSearchCompany">
+            </div>
+            <div id="listCompanies">
+            </div>
+        </div>
+
+        <div class="dialogue-container">
+            <form class="form-create-appeal hidden" id="formCreateAppeal">
+                <input type="text" id="subject" placeholder="Заголовок" required/>
+                <input type="text" id="priority" placeholder="Приоритет" required/>
+                <input type="text" id="responsibleCompanyId" placeholder="Ответственная компания" required/>
+                <button type="submit" class="btn">Создать</button>
+                <div id="responseMessage"></div>
+            </form>
+            <div class="dialogue hidden" id="infoAppeal">
+                <h2>Обращение #123</h2>
+                <div class="message" id="message">
+                    <p>Сообщения будут здесь...</p>
+                </div>
+            </div>
+            <div class="info-search-company hidden" id="infoSearchCompany">
+            </div>
+        </div>
+
+        <div class="setting-container hidden">
+            <div class="header-list-settings">
+                <h1>Настройки</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main-hidden.js"></script>
+    
+    <script type="module" src="js/appeal/create.js"></script>
+    <script type="module" src="js/appeal/get-all.js"></script>
+
+    <script type="module" src="js/user/create.js"></script>
+    <script type="module" src="js/user/get-all.js"></script>
+
+    <script type="module" src="js/company/search/search.js"></script>
+    
+    
+</body>
+</html>

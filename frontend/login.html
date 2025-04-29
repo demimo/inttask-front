@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Вход</h2>
+        <form id="formLogin">
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            />
+            <input
+                type="password"
+                id="password"
+                placeholder="Пароль"
+                required
+            />
+            <button type="submit" class="btn">Войти</button>
+        </form>
+        <div id="responseMessage"></div>
+        <a href="http://localhost/registration">Зарегистрироваться</a>
+    </div>
+
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>

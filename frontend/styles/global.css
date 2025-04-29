@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;  /* Убираем возможные отступы браузера */
+    padding: 0; /* Убираем отступы */
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; /* Скрываем горизонтальный скролл */
+    overflow-y: hidden;   /* Для вертикальной прокрутки, если она будет */
+}

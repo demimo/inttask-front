@@ -1,0 +1,25 @@
+.appeal-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.appeal-subject {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.appeal-status, .appeal-priority {
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.appeal-date {
+    font-size: 0.85em;
+    color: #777;
+}

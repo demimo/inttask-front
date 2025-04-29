@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистарция</title>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Регистарция</h2>
+        <form id="formRegistration">
+            <input
+                type="text"
+                id="companyName"
+                placeholder="Имя компании"
+                required
+            />
+            <input
+                type="text"
+                id="userName"
+                placeholder="Ваше полное имя"
+                required
+            />
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            />
+            <input
+                type="password"
+                id="password"
+                placeholder="Пароль"
+                required
+            />
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+        <div id="responseMessage"></div> <!-- Для вывода ответа сервера -->
+    </div>
+
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/registration.js"></script>
+</body>
+</html>
